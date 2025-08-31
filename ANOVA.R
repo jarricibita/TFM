@@ -5,8 +5,8 @@ library(patchwork)
 #--------------------------
 #LIMPIAR DATOS
 datos <- read_excel("ANOVA.xlsx", 
-                            sheet = "Resultados") 
-datos$TIEMPO_UV <- as.factor(datos$TIEMPO_UV) 
+                            sheet = "Resultados")
+
 datos$ENTRECRUZANTE <- as.factor(datos$ENTRECRUZANTE)
 datos$CATALIZADOR <- as.factor(datos$CATALIZADOR)
 datos$TIEMPO_UV <- as.factor(datos$TIEMPO_UV)
@@ -101,3 +101,4 @@ plot(resst~fitted(modelo_simplificado))
 qqnorm(resst)
 qqline(resst)
 shapiro.test(resst)
+
